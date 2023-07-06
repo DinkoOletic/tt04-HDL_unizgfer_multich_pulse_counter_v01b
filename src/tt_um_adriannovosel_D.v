@@ -2,6 +2,8 @@
 
 module tt_um_adriannovosel_D(input a, b, output reg y);
 
-assign y = a && b;
+   always@(a,b) begin
+      y = a && b;
+   end
    
 endmodule // top
