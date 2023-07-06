@@ -1,6 +1,6 @@
 //light up the leds according to a counter to cycle through every one
 
-module tt_um_adriannovosel_D(input wire a, b, clk, output reg y);
+module tt_um_adriannovosel_D(input wire a, b, clk, ena, output reg y);
 
    always@(posedge clk) begin
       y <= a && b;
