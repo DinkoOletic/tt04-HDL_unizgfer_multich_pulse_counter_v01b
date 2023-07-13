@@ -30,8 +30,10 @@ end
       	counter_register <= 4'b0;
     	
     end
-    else if (reset == 0 && clk == 1 && (ovf == 1 || ovf_RTC == 1))
+    else if (reset == 0) begin
+      if (clk == 1 && (ovf == 1 || ovf_RTC == 1))
       counter_register <= counter_register + 1;
+    end
     if(counter_register == 4'b1011) begin
       counter_register <= 4'b0;
       
