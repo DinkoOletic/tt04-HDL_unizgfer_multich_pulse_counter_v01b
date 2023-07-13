@@ -69,7 +69,7 @@ end
    
     
   end
-  always @(clk, reset, SL, zero) begin 
+  always @(*) begin 
     state_next = state_reg; // default state_next
     case (state_reg)
         s0 : begin
@@ -125,7 +125,7 @@ end
       end
     endcase
 end 
-  always @(state_reg) begin
+  always @(*) begin
     // default outputs
     case (state_reg)
    	 s0 : begin
