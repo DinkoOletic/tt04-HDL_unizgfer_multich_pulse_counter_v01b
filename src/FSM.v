@@ -3,7 +3,7 @@ A clock divider in Verilog, using the cascading
 flip-flop method.
 */
 
-module FSM(input clk, input reset, input wire ovf, ovf_RTC, output reg a0, a1, a2, SL, out_rst);
+module FSM(input clk, input reset, input wire ovf, ovf_RTC, output reg a0, a1, a2, SL, out_rst/* synthesis syn_preserve=1 */);
 
   reg [3:0] counter_register;
 initial begin
